@@ -4,6 +4,7 @@ import { CategoriasListComponent } from './categorias-list/categorias-list.compo
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { CategoriasAddComponent } from './categorias-add/categorias-add.component';
+import { CategoriasEditComponent } from './categorias-edit/categorias-edit.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: 'categorias/add',
     component: CategoriasAddComponent
+  },
+  {
+    path: 'categorias/edit',
+    component: CategoriasEditComponent
   },
   {
     path: '**',

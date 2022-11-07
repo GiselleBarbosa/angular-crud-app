@@ -12,9 +12,10 @@ import { CategoriasListComponent } from './categorias-list/categorias-list.compo
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { CategoriasAddComponent } from './categorias-add/categorias-add.component';
+import { CategoriasEditComponent } from './categorias-edit/categorias-edit.component';
 
 @NgModule({
-  declarations: [ AppComponent, HeaderComponent, CategoriasListComponent, DashboardComponent, NotFoundComponent, CategoriasAddComponent],
+  declarations: [ AppComponent, HeaderComponent, CategoriasListComponent, DashboardComponent, NotFoundComponent, CategoriasAddComponent, CategoriasEditComponent],
   imports: [ BrowserModule, AppRoutingModule, UIShellModule, IconModule ],
   providers: [],
   bootstrap: [AppComponent]
