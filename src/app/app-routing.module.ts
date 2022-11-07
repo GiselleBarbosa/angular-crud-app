@@ -8,32 +8,42 @@ import { CategoriasEditComponent } from './categorias-edit/categorias-edit.compo
 
 
 const routes: Routes = [
-  {
-    path: '',
-    pathMatch: 'full',
-    redirectTo: 'dashboard',
-  },
-  {
-    path: 'dashboard',
-    component: DashboardComponent
-  },
-  {
-    path: 'categorias/list',
-    component: CategoriasListComponent
-  },
-  {
-    path: 'categorias/add',
-    component: CategoriasAddComponent
-  },
-  {
-    path: 'categorias/edit',
-    component: CategoriasEditComponent
-  },
-  {
-    path: '**',
-    component: NotFoundComponent
-  }
-];
+    {
+      path: '',
+      pathMatch: 'full',
+      redirectTo: 'dashboard',
+    },
+    {
+      path: 'dashboard',
+      component: DashboardComponent,
+    },
+    {
+      path: 'categorias',
+      children: [
+        {
+          path: '',
+          pathMatch: 'full',
+          redirectTo: 'list',
+        },
+        {
+          path: 'list',
+          component: CategoriasListComponent,
+        },
+        {
+          path: 'add',
+          component: CategoriasAddComponent,
+        },
+        {
+          path: 'edit',
+          component: CategoriasEditComponent,
+        },
+      ],
+    },
+    {
+      path: '**',
+      component: NotFoundComponent,
+    },
+  ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
