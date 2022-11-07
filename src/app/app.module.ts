@@ -8,19 +8,11 @@ import { HeaderComponent } from './header/header.component';
 
 import { UIShellModule } from 'carbon-components-angular';
 import { IconModule } from 'carbon-components-angular/icon';
+import { CategoriasListComponent } from './categorias-list/categorias-list.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    UIShellModule,
-    IconModule
-
-  ],
+  declarations: [ AppComponent, HeaderComponent, CategoriasListComponent],
+  imports: [ BrowserModule, AppRoutingModule, UIShellModule, IconModule ],
   providers: [],
   bootstrap: [AppComponent]
 })
