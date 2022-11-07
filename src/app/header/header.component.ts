@@ -15,4 +15,8 @@ export class HeaderComponent implements OnInit {
     this.iconService.registerAll([Carbon20])
   }
 
+  goToCarbonHomePage(){
+    window.location.href = 'https://carbondesignsystem.com';
+  }
+
 }
