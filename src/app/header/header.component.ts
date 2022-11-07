@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IconService } from 'carbon-components-angular';
+import Carbon20 from '@carbon/icons/es/carbon/20';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private iconService: IconService) { }
 
   ngOnInit(): void {
+    this.iconService.registerAll([Carbon20])
   }
 
 }
