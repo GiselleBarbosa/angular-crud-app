@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Observable } from 'rxjs';
 import { CategoriaService } from '../shared/services/categoria.service';
 
 @Component({
@@ -8,20 +8,11 @@ import { CategoriaService } from '../shared/services/categoria.service';
   styleUrls: ['./categorias-list.component.scss']
 })
 export class CategoriasListComponent implements OnInit {
-  private subscription!: Subscription
+  findAllCategorias$!: Observable<Object>
 
   constructor(private categoriaService: CategoriaService) { }
 
   ngOnInit(): void {
-    this.categoriaService
-      .findAll().subscribe((categorias) => {
-        console.log(categorias);
-      });
-  }
-
-  ngOnDestroy(): void {
-    if (this.subscription) {
-      this.subscription.unsubscribe();
-    }
+    this.findAllCategorias$ = this.categoriaService.findAll();
   }
 }
